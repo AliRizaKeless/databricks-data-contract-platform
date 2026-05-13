@@ -1,0 +1,22 @@
+{
+  "table_name": "weather_data",
+  "schema": {
+    "timestamp": "datetime",
+    "temperature": "float",
+    "wind_speed": "float",
+    "city": "string"
+  },
+  "constraints": {
+    "temperature": {
+      "min": -50,
+      "max": 50
+    },
+    "wind_speed": {
+      "min": 0,
+      "max": 60
+    },
+    "city": {
+      "not_null": true
+    }
+  }
+}
