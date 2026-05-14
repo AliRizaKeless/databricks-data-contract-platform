@@ -1,0 +1,25 @@
+{
+  "table_name": "weather_data",
+  "validated_at": "2026-05-14T21:37:18.716924",
+  "data_path": "data/weather_sample.csv",
+  "contract_path": "contracts/weather_contract.json",
+  "total_rows": 4,
+  "failed_rows": 2,
+  "passed_rows": 2,
+  "status": "FAILED",
+  "errors": [
+    {
+      "row_number": 4,
+      "errors": [
+        "temperature above max: 120.0"
+      ]
+    },
+    {
+      "row_number": 5,
+      "errors": [
+        "wind_speed above max: 80.0",
+        "city is null or empty"
+      ]
+    }
+  ]
+}
