@@ -1,6 +1,6 @@
 {
   "table_name": "weather_data",
-  "validated_at": "2026-05-14T21:44:36.185833",
+  "validated_at": "2026-05-14T21:45:57.403853",
   "data_path": "data/weather_sample.csv",
   "contract_path": "contracts/weather_contract.json",
   "total_rows": 4,
