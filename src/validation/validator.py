@@ -1,6 +1,15 @@
 import csv
 import json
+import logging
 from datetime import datetime
+
+
+# Logging ayarı
+logging.basicConfig(
+    filename="logs/validation.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
 def load_contract(contract_path):
@@ -15,11 +24,13 @@ def validate_row(row, contract):
     for field, rules in constraints.items():
         value = row.get(field)
 
+        # not null kontrolü
         if isinstance(rules, dict) and rules.get("not_null"):
             if value is None or value.strip() == "":
                 errors.append(f"{field} is null or empty")
                 continue
 
+        # numeric kontrol
         try:
             numeric_value = float(value)
         except (TypeError, ValueError):
@@ -55,6 +66,8 @@ def validate_file(data_path, contract_path, report_path="reports/validation_repo
                     "errors": errors
                 })
 
+                logging.error(f"Row {i} FAILED: {errors}")
+
                 print(f"Row {i} FAILED:")
                 for e in errors:
                     print(f"  - {e}")
@@ -74,6 +87,9 @@ def validate_file(data_path, contract_path, report_path="reports/validation_repo
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)
 
+    logging.info(f"Total rows: {total}")
+    logging.info(f"Failed rows: {failed}")
+
     print("\nSummary")
     print("--------")
     print(f"Total: {total}")
@@ -81,6 +97,8 @@ def validate_file(data_path, contract_path, report_path="reports/validation_repo
     print(f"Report written to: {report_path}")
 
     if failed > 0:
+        logging.error("Validation failed")
         raise SystemExit("Validation failed")
 
+    logging.info("Validation passed")
     print("Validation passed")
