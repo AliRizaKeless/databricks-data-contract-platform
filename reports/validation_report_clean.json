@@ -1,0 +1,11 @@
+{
+  "table_name": "weather_data",
+  "validated_at": "2026-05-15T10:22:02.901970",
+  "data_path": "data/weather_sample_clean.csv",
+  "contract_path": "contracts/weather_contract.json",
+  "total_rows": 4,
+  "failed_rows": 0,
+  "passed_rows": 4,
+  "status": "PASSED",
+  "errors": []
+}
