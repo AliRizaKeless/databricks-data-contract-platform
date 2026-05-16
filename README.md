@@ -62,7 +62,14 @@ This project solves that by validating data before it is trusted by downstream s
 
 \- JSON data contracts
 
+## How It Works
 
+1. A data contract defines the expected structure and quality rules for a dataset.
+2. Incoming data is validated against the contract.
+3. Invalid rows are detected and reported.
+4. A validation report is generated as JSON.
+5. The pipeline fails if data quality rules are violated.
+6. GitHub Actions runs the validation automatically on every push.
 
 \## Current Features
 
