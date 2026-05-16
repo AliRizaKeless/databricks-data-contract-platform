@@ -62,6 +62,19 @@ This project solves that by validating data before it is trusted by downstream s
 
 \- JSON data contracts
 
+## Skills Demonstrated
+
+This project demonstrates practical experience with:
+
+- Modern data platform design
+- Databricks-ready data validation workflows
+- PySpark-based distributed data processing
+- Data contracts and data quality rules
+- Fail-fast pipeline design
+- CI/CD with GitHub Actions
+- Logging and validation reporting
+- Lakehouse-oriented project structure
+
 ## How It Works
 
 1. A data contract defines the expected structure and quality rules for a dataset.
