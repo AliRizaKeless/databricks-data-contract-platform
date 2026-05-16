@@ -84,6 +84,24 @@ This project demonstrates practical experience with:
 5. The pipeline fails if data quality rules are violated.
 6. GitHub Actions runs the validation automatically on every push.
 
+## Architecture
+
+The platform follows a contract-driven data validation approach:
+
+Data Source (CSV / API)
+        ↓
+Ingestion Layer
+        ↓
+Validation Engine (Contract-based)
+        ↓
+Validated / Rejected Data
+        ↓
+Delta Lake (Databricks-ready)
+        ↓
+Analytics / Downstream Systems
+
+The validation layer ensures that only high-quality, contract-compliant data is allowed into the lakehouse.
+
 \## Current Features
 
 
