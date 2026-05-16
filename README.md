@@ -102,6 +102,16 @@ Analytics / Downstream Systems
 
 The validation layer ensures that only high-quality, contract-compliant data is allowed into the lakehouse.
 
+## Delta Lake Medallion Pipeline
+
+The project includes a Databricks-ready Delta Lake pipeline following the medallion architecture:
+
+- Bronze: raw ingested weather data
+- Silver: cleaned and validated weather data
+- Gold: analytics-ready weather summary by city
+
+This demonstrates how validated data can move through a lakehouse pipeline using Delta tables.
+
 \## Current Features
 
 
