@@ -125,6 +125,17 @@ The project includes a simple machine learning workflow using MLflow:
 
 This demonstrates how a data platform can support downstream machine learning workflows.
 
+## Unity Catalog Governance
+
+The project includes a Databricks Unity Catalog setup example:
+
+- Catalog creation
+- Schema creation
+- Managed Delta tables
+- Governance-ready table organization
+
+This demonstrates how the lakehouse tables can be structured for centralized governance, access control, and discoverability in Databricks.
+
 \## Current Features
 
 
