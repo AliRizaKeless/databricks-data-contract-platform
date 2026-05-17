@@ -112,6 +112,19 @@ The project includes a Databricks-ready Delta Lake pipeline following the medall
 
 This demonstrates how validated data can move through a lakehouse pipeline using Delta tables.
 
+## MLflow Model Tracking
+
+The project includes a simple machine learning workflow using MLflow:
+
+- A Linear Regression model predicts temperature based on wind speed
+- Training is performed on the Silver layer data
+- MLflow is used to track:
+  - Parameters
+  - Metrics (MSE)
+  - Trained model artifacts
+
+This demonstrates how a data platform can support downstream machine learning workflows.
+
 \## Current Features
 
 
