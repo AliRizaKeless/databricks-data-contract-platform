@@ -4,7 +4,11 @@
 
 A contract-driven data validation platform designed for modern lakehouse architectures.
 
+## Recruiter Summary
 
+This project demonstrates a production-oriented Databricks Lakehouse workflow with contract-driven data validation, PySpark processing, Delta Lake medallion architecture, Unity Catalog governance, MLflow model tracking, CI/CD automation, logging, and validation reporting.
+
+It is designed to reflect real-world data platform engineering practices used in modern cloud-based analytics environments.
 
 \## Project Goal
 
