@@ -183,3 +183,10 @@ tests/
 Status
 
 Work in progress.
+
+## Quick Demo
+
+### Run validation (failing example)
+
+```bash
+py src/validation/validate_contract.py --data data/weather_sample.csv --contract contracts/weather_contract.json
